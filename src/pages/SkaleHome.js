@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import Navbar from '../components/Navbar';
+
 const SkaleHome = () => {
 
     const [ucesnici, setUcesnici] = useState([
@@ -12,7 +15,7 @@ const SkaleHome = () => {
 
     return (
         <div className="skale">
-
+            <Navbar />  
         </div>
     )
 }

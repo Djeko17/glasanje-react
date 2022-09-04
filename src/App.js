@@ -1,11 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import SkaleHome from './pages/SkaleHome';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
-      <SkaleHome />
+      <Router>
+        <Routes>
+          <Route path="/" element={<SkaleHome />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
