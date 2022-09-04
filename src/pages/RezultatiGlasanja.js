@@ -1,3 +1,8 @@
+import { useState } from 'react'
+import Navbar from '../components/Navbar';
+import TabelaRezultati from '../components/TabelaRezultati';
+
+
 const RezultatiGlasanja = () => {
 
     const [ucesnici, setUcesnici] = useState([
@@ -11,10 +16,14 @@ const RezultatiGlasanja = () => {
     ]);
 
     return (
-        <div>
+        <div className='rezultatiglasanja'>
             <Navbar />
 
             <h3 id='ss-22'>Suncane Skale '22</h3>
+
+            <TabelaRezultati ucesnici={ucesnici} />
+
+
         </div>
     )
 }
