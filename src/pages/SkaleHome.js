@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar';
+import PrikazUcesnika from '../components/PrikazUcesnika';
 
 const SkaleHome = () => {
 
@@ -15,7 +16,12 @@ const SkaleHome = () => {
 
     return (
         <div className="skale">
-            <Navbar />  
+            <Navbar />
+
+            <h3 id='ss-22'>Suncane Skale '22</h3>
+
+            <PrikazUcesnika ucesniciSkale={ucesnici} />
+
         </div>
     )
 }

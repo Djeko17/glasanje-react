@@ -69,3 +69,25 @@
   background-color: #8fe4ff;
   color: white;
 }
+
+#ss-22{
+  font-size: 55px;
+  margin-top: 25px;
+  margin-left: 80px;
+}
+
+.prikazucesnika{
+   margin-left: 80px;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 250px 250px 250px;
+    grid-row-gap: 120px;
+    grid-column-gap: 150px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#glasaj-button{
+  width: 200px;
+  font-size: 22px;
+}
