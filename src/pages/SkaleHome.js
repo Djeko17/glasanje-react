@@ -14,6 +14,7 @@ const SkaleHome = () => {
 
     ]);
 
+
     return (
         <div className="skale">
             <Navbar />
