@@ -1,11 +1,27 @@
+import { useState } from 'react'
+
 const TabelaRezultati = (props) => {
 
     var ucesnici = props.ucesnici;
-    const [ucesniciTabela, setUcesniciTabela] = useState([ucesnici]);
+    const [ucesniciTabela, setUcesniciTabela] = useState(ucesnici);
+    const [filter, setFilter] = useState([]);
+    const [filter2, setFilter2] = useState([]);
+
+    const sortiraj = (dole) => {
+        if (dole === "dole")
+            setFilter(ucesniciTabela.sort((a, b) => b.brojGlasova - a.brojGlasova));
+
+        if (dole === "gore")
+            setFilter2(ucesniciTabela.sort((a, b) => a.brojGlasova - b.brojGlasova));
+
+    }
 
 
     return (
         <div className="tabelarezultati">
+
+            <button onClick={() => sortiraj("dole")} className='btn btn-primary'>Sort Opadajuce</button>
+            <button onClick={() => sortiraj("gore")} className='btn btn-primary mx-3'>Sort Rastuce</button>
 
             <table className="table" id="tabela-glasanje">
                 <thead>
@@ -17,7 +33,8 @@ const TabelaRezultati = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {ucesnici.map(ucesnik => {
+                    {console.log("OVDE")}
+                    {ucesniciTabela.map(ucesnik => {
                         return (
                             <tr key={ucesnik.id}>
                                 <td>{ucesnik.id}</td>
